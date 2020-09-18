@@ -59,6 +59,6 @@ public  class CallableTest {
         }
 
         System.out.println(futureTask2.get());
-
+        System.out.println("master");
     }
 }
