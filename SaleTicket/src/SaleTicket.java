@@ -48,7 +48,7 @@ public class SaleTicket {
         new Thread(() -> {for(int i =1;i<=10;i++) ticket.saleTicket();},"A").start();
         new Thread(() -> {for(int i =1;i<=20;i++) ticket.saleTicket();},"B").start();
         new Thread(() -> {for(int i =1;i<=30;i++) ticket.saleTicket();},"C").start();
-
+        System.out.println("皮一下");
     }
 }
 
