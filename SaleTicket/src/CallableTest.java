@@ -41,7 +41,7 @@ public  class CallableTest {
         FutureTask futureTask2 = new FutureTask(()->{
             System.out.println("callable is come");
             TimeUnit.SECONDS.sleep(4L);
-            return 2048;
+            return 1204*3;
         });
 
         new Thread(futureTask,"A").start();
