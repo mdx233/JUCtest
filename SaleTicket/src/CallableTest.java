@@ -41,7 +41,7 @@ public  class CallableTest {
         FutureTask futureTask2 = new FutureTask(()->{
             System.out.println("callable is come");
             TimeUnit.SECONDS.sleep(4L);
-            return 1204*3;
+            return 1204;
         });
 
         new Thread(futureTask,"A").start();
@@ -59,7 +59,5 @@ public  class CallableTest {
         }
 
         System.out.println(futureTask2.get());
-        System.out.println("主干添加");
-        System.out.println("分支添加");
     }
 }
