@@ -60,5 +60,6 @@ public  class CallableTest {
 
         System.out.println(futureTask2.get());
         System.out.println("master");
+        System.out.println("主干添加");
     }
 }
