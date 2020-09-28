@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.mdx.example</groupId>
+  <artifactId>ch01-hello-mybatis</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>ch01-hello-mybatis</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!--mybatis依赖-->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.5.1 </version>
+    </dependency>
+    <!--mysql驱动-->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.9</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <resources>
+      <!--使maven能将java内的非java文件复制到target文件下的类文件中-->
+      <resource>
+        <directory>src/main/java</directory><!--所在的目录-->
+        <includes><!--包括目录下的.properties,.xml 文件都会扫描到-->
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+          <include>**/*.XML</include>
+        </includes>
+        <filtering>false</filtering>
+      </resource>
+      <!--原本resources文件下的文件都能复制到target/classes文件的根目录之下，但是加了上面的配置之后，必须加下面这句才能使maven复制resources文件下的内容-->
+      <resource>
+        <directory>src/main/resources</directory><!--所在的目录-->
+        <includes><!--包括目录下的.properties,.xml 文件都会扫描到-->
+          <include>**/*.*</include>
+          <include>**/*.*</include>
+          <include>**/*/*.*</include>
+        </includes>
+      </resource>
+    </resources>
+
+
+
+
+  </build>
+</project>

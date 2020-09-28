@@ -1,0 +1,6 @@
+com\mdx\entity\Student.class
+com\mdx\StudentTest.class
+com\mdx\dao\StudentDao.class
+com\mdx\InsertTest.class
+com\mdx\utils\MyBatisUtils.class
+com\mdx\example\App.class
